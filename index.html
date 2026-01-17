@@ -5,87 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alper Yilmaz | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="logo">AY</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#resume">Lebenslauf</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
+    <div class="cursor-blur"></div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">AY<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Erfahrung</a></li>
+                <li><a href="#education">Studium</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header id="home">
-        <div class="hero reveal-up">
-            <span class="badge">Informatiker & Entwickler</span>
-            <h1>Alper Yilmaz</h1>
-            <p class="subtitle">Bachelor of Science in Informatik</p>
-            <div class="hero-btns">
-                <a href="#resume" class="btn primary">Werdegang</a>
-                <a href="#contact" class="btn secondary">Kontakt</a>
+    <header id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="reveal-up">
+                <span class="badge">Informatik & SAP Solutions</span>
+                <h1>Alper Yilmaz</h1>
+                <p class="hero-desc">
+                    Bachelorand bei der **Wieland Group** mit Fokus auf **SAP BTP** und Berechtigungskonzepte. 
+                    Informatikstudent an der TH Ulm.
+                </p>
+                <div class="hero-btns">
+                    <a href="#experience" class="btn-primary">Werdegang</a>
+                    <a href="#contact" class="btn-secondary">Kontakt</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="about">
-        <div class="container reveal-left">
-            <h2>Über mich</h2>
-            <p>Als Absolvent der **Technischen Hochschule Ulm** kombiniere ich theoretisches Wissen der Informatik mit praktischer Erfahrung als **Fachinformatiker für Systemintegration**. Mein Fokus liegt auf effizienter Softwareentwicklung und modernen IT-Lösungen.</p>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-up">Berufserfahrung</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="time-box">Dez. 2025 - Heute</div>
+                    <div class="time-content">
+                        <h3>Wieland Group</h3>
+                        <p class="role">Bachelorarbeit & Werkstudent – SAP BTP</p>
+                        <p class="desc">Entwicklung und Implementierung von Cloud-Lösungen auf der SAP Business Technology Platform.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="time-box">2023 - 2025</div>
+                    <div class="time-content">
+                        <h3>Wieland Group</h3>
+                        <p class="role">Werkstudent – SAP Authorization</p>
+                        <p class="desc">Betreuung und Implementierung von Berechtigungskonzepten.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="time-box">2022 - 2023</div>
+                    <div class="time-content">
+                        <h3>Airbus</h3>
+                        <p class="role">Werkstudent – Systemadministration</p>
+                        <p class="desc">Administration von Windows Servern und Netzwerk-Infrastrukturen.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="resume">
-        <h2>Lebenslauf</h2>
-        <div class="timeline">
-            <div class="timeline-item reveal-left">
-                <div class="date">2021 - Heute</div>
-                <div class="content">
-                    <h3>Bachelor of Science in Informatik</h3>
-                    <p>Technische Hochschule, Ulm</p>
+    <section id="education" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title reveal-up">Studium & Ausbildung</h2>
+            <div class="grid-2">
+                <div class="glass-card reveal-left">
+                    <h3>TH Ulm</h3>
+                    <p>B.Sc. Informatik (seit 2021)</p>
                 </div>
-            </div>
-            <div class="timeline-item reveal-right">
-                <div class="date">2020 - 2021</div>
-                <div class="content">
-                    <h3>Fachhochschulereife</h3>
-                    <p>Ferdinand-von-Steinbeis Schule, Ulm</p>
-                </div>
-            </div>
-            <div class="timeline-item reveal-left">
-                <div class="date">2017 - 2020</div>
-                <div class="content">
-                    <h3>Ausbildung Fachinformatiker</h3>
-                    <p>Häussler Medizin- und Rehatechnik, Ulm</p>
+                <div class="glass-card reveal-right">
+                    <h3>Häussler Medizintechnik</h3>
+                    <p>Fachinformatiker Systemintegration (2017-2020)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="dark-bg">
-        <div class="reveal-up">
-            <h2>Kenntnisse</h2>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal-up">Tech Stack</h2>
             <div class="skill-grid">
-                <div class="skill-card"><h3>Sprachen</h3><p>Java, C, C# (Gute Kenntnisse)</p></div>
-                <div class="skill-card"><h3>Web</h3><p>SQL, HTML, CSS (Grundkenntnisse)</p></div>
-                <div class="skill-card"><h3>Office</h3><p>Word, Excel, PowerPoint (Sehr gut)</p></div>
+                <div class="skill-card reveal-up">
+                    <h4>Programmiersprachen</h4>
+                    <p>Java, C, C# (gute Kenntnisse)</p>
+                    <p>SQL, HTML, CSS (Grundkenntnisse)</p>
+                </div>
+                <div class="skill-card reveal-up">
+                    <h4>Fokus-Gebiete</h4>
+                    <p>SAP BTP, SAP Authorization, Cloud Lösungen</p>
+                    <p>Windows Server & Netzwerkadministration</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="reveal-up">
-        <h2>Kontakt</h2>
-        <div class="contact-box">
-            <p>📧 yilmaz.2000@gmx.de</p>
-            <p>📞 +49 1573 7213727</p>
-            <p>📍 Illertissen</p>
+    <footer id="contact" class="footer">
+        <div class="container reveal-up">
+            <h2>Kontakt</h2>
+            <div class="contact-links">
+                <a href="mailto:yilmaz.2000@gmx.de">yilmaz.2000@gmx.de</a>
+                <a href="tel:+4915737213727">+49 1573 7213727</a>
+                <p>89257 Illertissen</p>
+            </div>
+            <p class="copyright">© 2026 Alper Yilmaz</p>
         </div>
-    </section>
-
-    <footer><p>&copy; 2026 Alper Yilmaz</p></footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>

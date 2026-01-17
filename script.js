@@ -1,17 +1,16 @@
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal-up, .reveal-left, .reveal-right");
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, observerOptions);
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-// Sofort prüfen, falls man schon auf der Seite ist
-reveal();
+document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach((el) => {
+    observer.observe(el);
+});
