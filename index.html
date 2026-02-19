@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alper Yilmaz | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Alper Yilmaz | SAP Solutions & Informatik</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cursor-blur"></div>
+    <div id="mouse-glow"></div>
 
     <nav class="navbar">
         <div class="container nav-content">
@@ -16,8 +16,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Erfahrung</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
                 <li><a href="#education">Studium</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
@@ -26,14 +26,14 @@
     <header id="home" class="hero-section">
         <div class="container hero-content">
             <div class="reveal-up">
-                <span class="badge">Informatik & SAP Solutions</span>
+                <span class="badge">Student | SAP Solutions</span>
                 <h1>Alper Yilmaz</h1>
                 <p class="hero-desc">
-                    Bachelorand bei der **Wieland Group** mit Fokus auf **SAP BTP** und Berechtigungskonzepte. 
-                    Informatikstudent an der TH Ulm.
+                    Informatikstudent an der TH Ulm & Bachelorand bei der <strong>Wieland Group</strong>. 
+                    Experte für SAP Business Technology Platform und globale Berechtigungskonzepte im Enterprise-Umfeld.
                 </p>
                 <div class="hero-btns">
-                    <a href="#experience" class="btn-primary">Werdegang</a>
+                    <a href="#experience" class="btn-primary">Werdegang ansehen</a>
                     <a href="#contact" class="btn-secondary">Kontakt</a>
                 </div>
             </div>
@@ -44,63 +44,161 @@
         <div class="container">
             <h2 class="section-title reveal-up">Berufserfahrung</h2>
             <div class="timeline">
+                
                 <div class="timeline-item reveal-left">
                     <div class="time-box">Dez. 2025 - Heute</div>
-                    <div class="time-content">
-                        <h3>Wieland Group</h3>
-                        <p class="role">Bachelorarbeit & Werkstudent – SAP BTP</p>
-                        <p class="desc">Entwicklung und Implementierung von Cloud-Lösungen auf der SAP Business Technology Platform.</p>
+                    <div class="time-content expandable glow-card">
+                        <div class="time-header">
+                            <div>
+                                <h3>Wieland Group</h3>
+                                <p class="role">Bachelorarbeit & Werkstudent – SAP BTP</p>
+                            </div>
+                            <div class="expand-indicator">+</div>
+                        </div>
+                        <div class="content-details">
+                            <p class="desc">Fokus auf die Architektur und Absicherung moderner Cloud-Umgebungen innerhalb der SAP Business Technology Platform (BTP).</p>
+                            <ul class="task-list">
+                                <li><strong>SAP BTP Security:</strong> Konzeptionierung und Implementierung von feingranularen Berechtigungsmodellen in der Cloud Foundry Umgebung.</li>
+                                <li><strong>Innovation:</strong> Evaluierung von <em>Joule AI</em> und dem <em>Business Application Studio</em> zur Beschleunigung von Entwicklungsprozessen (CAP Modell).</li>
+                                <li><strong>Cloud Integration:</strong> Aufbau von Side-by-Side Extensions, um den S/4HANA Core „clean“ zu halten (Clean Core Strategie).</li>
+                                <li><strong>Fiori Deployment:</strong> Unterstützung beim Lifecycle Management von Fiori Apps über die SAP BTP Launchpad Services.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
                 <div class="timeline-item reveal-right">
                     <div class="time-box">2023 - 2025</div>
-                    <div class="time-content">
-                        <h3>Wieland Group</h3>
-                        <p class="role">Werkstudent – SAP Authorization</p>
-                        <p class="desc">Betreuung und Implementierung von Berechtigungskonzepten.</p>
+                    <div class="time-content expandable glow-card">
+                        <div class="time-header">
+                            <div>
+                                <h3>Wieland Group</h3>
+                                <p class="role">Werkstudent – SAP Authorization</p>
+                            </div>
+                            <div class="expand-indicator">+</div>
+                        </div>
+                        <div class="content-details">
+                            <p class="desc">Operative Betreuung der globalen SAP-Berechtigungsinfrastruktur für mehrere tausend User weltweit.</p>
+                            <ul class="task-list">
+                                <li><strong>Global Governance:</strong> Design und Wartung von komplexen Rollenstrukturen in S/4HANA (PFCG, SU24 Optimierung).</li>
+                                <li><strong>Compliance:</strong> Durchführung von Segregation of Duties (SoD) Analysen zur Vermeidung von kritischen Berechtigungskonflikten (GRC-Ansatz).</li>
+                                <li><strong>Modul-Support:</strong> Enge Zusammenarbeit mit Fachbereichen (FI, CO, SD, EWM), um prozessorientierte Zugriffsberechtigungen zu erstellen.</li>
+                                <li><strong>Reporting:</strong> Auswertung von SAP-Daten und Erstellung von Berichten zur Prozessoptimierung in der Benutzerverwaltung.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
                 <div class="timeline-item reveal-left">
                     <div class="time-box">2022 - 2023</div>
-                    <div class="time-content">
-                        <h3>Airbus</h3>
-                        <p class="role">Werkstudent – Systemadministration</p>
-                        <p class="desc">Administration von Windows Servern und Netzwerk-Infrastrukturen.</p>
+                    <div class="time-content expandable glow-card">
+                        <div class="time-header">
+                            <div>
+                                <h3>Airbus</h3>
+                                <p class="role">Werkstudent – Systemadministration</p>
+                            </div>
+                            <div class="expand-indicator">+</div>
+                        </div>
+                        <div class="content-details">
+                            <p class="desc">Administration hochverfügbarer IT-Systeme in einem sicherheitskritischen Industrieumfeld.</p>
+                            <ul class="task-list">
+                                <li><strong>Infrastruktur:</strong> Administration von Windows Server-Umgebungen und Verwaltung von Gruppenrichtlinien (GPO) im Active Directory.</li>
+                                <li><strong>Monitoring:</strong> Überwachung der Netzwerkperformance mit <em>NetBossXT</em> und proaktives Troubleshooting bei Störungen.</li>
+                                <li><strong>Security:</strong> Betreuung der TETRA-Infrastruktur für die sicherheitskritische Kommunikation am Standort.</li>
+                                <li><strong>APIs:</strong> Unterstützung bei der Implementierung von Schnittstellen auf Basis von Java (SNMP) zur Systemüberwachung.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section alt-bg">
+    <section id="skills" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title reveal-up">Studium & Ausbildung</h2>
-            <div class="grid-2">
-                <div class="glass-card reveal-left">
-                    <h3>TH Ulm</h3>
-                    <p>B.Sc. Informatik (seit 2021)</p>
+            <h2 class="section-title reveal-up">Tech Stack & IT-Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category reveal-up glow-card">
+                    <div class="category-header">
+                        <span class="category-icon">🚀</span>
+                        <h3>SAP Core & Innovation</h3>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-tags">
+                            <span>S/4HANA (ERP, BI, Fiori)</span>
+                            <span>Authorization (PFCG, SU01, SU24)</span>
+                            <span>SAP BTP (Cockpit, Extension)</span>
+                            <span>Joule AI & CAP</span>
+                            <span>Side-by-Side Extensions</span>
+                            <span>SAP FI/CO/SD </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass-card reveal-right">
-                    <h3>Häussler Medizintechnik</h3>
-                    <p>Fachinformatiker Systemintegration (2017-2020)</p>
+
+                <div class="skill-category reveal-up glow-card">
+                    <div class="category-header">
+                        <span class="category-icon">🛡️</span>
+                        <h3>Infrastructure & Security</h3>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-tags">
+                            <span>Active Directory</span>
+                            <span>Netzwerkadministration</span>
+                            <span>Monitoring (NetBossXT)</span>
+                            <span>TETRA Communication</span>
+                            <span>Windows & Linux Server</span>
+                            <span>Cloud Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal-up glow-card">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3>Development & Integration</h3>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-tags">
+                            <span>Java (SNMP)</span>
+                            <span>Python</span>
+                            <span>HTML5 / CSS / UI5</span>
+                            <span>REST-APIs (JSON)</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal-up glow-card">
+                    <div class="category-header">
+                        <span class="category-icon">📊</span>
+                        <h3>Analytics & Operations</h3>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-tags">
+                            <span>SAP Rollouts & Updates</span>
+                            <span>Testing & Dokumentation</span>
+                            <span>Dashboards</span>
+                            <span>User Lifecycle Management</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="education" class="section">
         <div class="container">
-            <h2 class="section-title reveal-up">Tech Stack</h2>
-            <div class="skill-grid">
-                <div class="skill-card reveal-up">
-                    <h4>Programmiersprachen</h4>
-                    <p>Java, C, C# (gute Kenntnisse)</p>
-                    <p>SQL, HTML, CSS (Grundkenntnisse)</p>
+            <h2 class="section-title reveal-up">Bildungsweg</h2>
+            <div class="grid-2">
+                <div class="glass-card reveal-left glow-card">
+                    <h3>TH Ulm</h3>
+                    <p class="role">B.Sc. Informatik (seit 2021) - vsl. 04.2026</p>
+                    <p class="desc">Vertiefung in Software Engineering und Cloud-Infrastrukturen.</p>
                 </div>
-                <div class="skill-card reveal-up">
-                    <h4>Fokus-Gebiete</h4>
-                    <p>SAP BTP, SAP Authorization, Cloud Lösungen</p>
-                    <p>Windows Server & Netzwerkadministration</p>
+                <div class="glass-card reveal-right glow-card">
+                    <h3>Häussler Medizintechnik</h3>
+                    <p class="role">Fachinformatiker Systemintegration (2017-2020)</p>
+                    <p class="desc">Berufsausbildung mit Schwerpunkt Netzwerk- und Systemtechnik. Abschlussarbeit: Active Directory Server</p>
                 </div>
             </div>
         </div>
@@ -110,11 +208,10 @@
         <div class="container reveal-up">
             <h2>Kontakt</h2>
             <div class="contact-links">
-                <a href="mailto:yilmaz.2000@gmx.de">yilmaz.2000@gmx.de</a>
-                <a href="tel:+4915737213727">+49 1573 7213727</a>
-                <p>89257 Illertissen</p>
+                <a href="mailto:yilmaz.2000@gmx.de" class="contact-item">yilmaz.2000@gmx.de</a>
+                <p>89257 Illertissen, Deutschland</p>
             </div>
-            <p class="copyright">© 2026 Alper Yilmaz</p>
+            <p class="copyright">© 2026 Alper Yilmaz | SAP & IT Expertise</p>
         </div>
     </footer>
 
