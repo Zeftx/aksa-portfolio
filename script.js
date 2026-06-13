@@ -1,35 +1,38 @@
-// Accordion
-document.querySelectorAll('.time-content.expandable').forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
-    });
-});
+// Funktion zum Öffnen der Detailansicht
+function openDetail(id) {
+    const overlay = document.getElementById(id);
+    if (overlay) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Scrollen im Hintergrund sperren
+    }
+}
 
-// Reveal on Scroll
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
-    });
-}, { threshold: 0.1 });
+// Funktion zum Schließen der Detailansicht
+function closeDetail(id) {
+    const overlay = document.getElementById(id);
+    if (overlay) {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Scrollen wieder aktivieren
+    }
+}
 
-document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+// Schließen des Overlays bei Klick außerhalb des Fensters
+window.onclick = function(event) {
+    if (event.target.classList.contains('detail-overlay')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
 
-// Mouse Glow
-const mouseGlow = document.getElementById('mouse-glow');
-let timeoutId;
-
-document.addEventListener('mousemove', (e) => {
-    mouseGlow.style.left = `${e.clientX}px`;
-    mouseGlow.style.top = `${e.clientY}px`;
-    document.body.classList.add('mouse-active');
-
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-        document.body.classList.remove('mouse-active');
-    }, 1000);
-});
-
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    nav.style.padding = window.scrollY > 80 ? '0.8rem 0' : '1.2rem 0';
+// Zusätzliches Komfort-Feature: Schließen mit der ESC-Taste
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const activeOverlays = document.querySelectorAll('.detail-overlay');
+        activeOverlays.forEach(overlay => {
+            if (overlay.style.display === 'flex') {
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
 });

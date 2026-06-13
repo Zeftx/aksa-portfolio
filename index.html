@@ -3,218 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alper Yilmaz | SAP Solutions & Informatik</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>ASKA PRODUCTS | Premium Kabelmanagement</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mouse-glow"></div>
 
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">AY<span>.</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#experience">Erfahrung</a></li>
-                <li><a href="#skills">Tech Stack</a></li>
-                <li><a href="#education">Studium</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header id="home" class="hero-section">
-        <div class="container hero-content">
-            <div class="reveal-up">
-                <span class="badge">Informatik Student | SAP Solutions</span>
-                <h1>Alper Yilmaz</h1>
-                <p class="hero-desc">
-                    Informatikstudent an der TH Ulm & Bachelorand bei der <strong>Wieland Group</strong>. 
-                    Experte für SAP Business Technology Platform und globale Berechtigungskonzepte im Enterprise-Umfeld.
-                </p>
-                <div class="hero-btns">
-                    <a href="#experience" class="btn-primary">Werdegang ansehen</a>
-                    <a href="#contact" class="btn-secondary">Kontakt</a>
-                </div>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="bilder/logo_aska.jpg" alt="ASKA PRODUCTS Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='inline-block';">
+            <div id="logo-fallback" style="display:none;">
+                <span class="logo-text">ASKA</span> <span class="logo-sub">PRODUCTS</span>
             </div>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#vergleich">Vergleich</a></li>
+                <li><a href="#konfigurator">Materialien</a></li>
+                <li><a href="#produkte">Produkte</a></li>
+                <li><a href="#details">Details</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title reveal-up">Berufserfahrung</h2>
-            <div class="timeline">
+    <!-- HERO SECTION -->
+    <section class="hero animate-fade-up">
+        <div class="hero-content">
+            <span class="hero-badge">⚡ Workspace Upgrade</span>
+            <h1>Die Revolution des Kabelmanagements.</h1>
+            <p class="hero-tagline">Schluss mit unschönem Kabelsalat! Unsere Premium-Lösungen vereinen edles Design mit maximaler Flexibilität – für ein sauberes Setup im Handumdrehen.</p>
+            <div class="hero-features">
+                <span class="feature-tag">Ohne Werkzeug</span>
+                <span class="feature-tag">Flexibler Klett</span>
+                <span class="feature-tag">Premium Textil & Leder</span>
+            </div>
+            <a href="#produkte" class="btn-dark">Jetzt Produkte entdecken</a>
+        </div>
+        <div class="hero-image">
+            <img src="bilder/Schlauch am Schreibtisch 2.jpg" alt="ASKA Kabelmanagement im Einsatz">
+        </div>
+    </section>
+
+    <!-- VORHER / NACHHER VERGLEICH -->
+    <section id="vergleich" class="comparison-section animate-fade-up">
+        <div class="section-header">
+            <h2>Der Vorher-Nachher Effekt</h2>
+            <p class="section-subtitle">Erleben Sie den Unterschied: Verwandeln Sie Chaos in pure Ästhetik</p>
+        </div>
+        
+        <div class="comparison-grid">
+            <div class="comparison-card before">
+                <div class="comp-badge">Vorher</div>
+                <div class="comp-img-wrapper">
+                    <img src="bilder/Kabeln am Schreibtischtischbein.jpg" alt="Kabelchaos vor der Nutzung">
+                </div>
+                <div class="comp-text">
+                    <h4>Kabelsalat & Ablenkung</h4>
+                    <p>Ungeordnete Kabel stören die Konzentration, fangen extrem viel Staub und zerstören die Optik eines hochwertigen Raumes.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-card after">
+                <div class="comp-badge">Nachher</div>
+                <div class="comp-img-wrapper">
+                    <img src="bilder/Schlauch am Schreibtischtischbein.jpg" alt="Saubere Gesamtübersicht mit ASKA">
+                </div>
+                <div class="comp-text">
+                    <h4>Saubere Eleganz im Raum</h4>
+                    <p>Gebündelt, geschützt und unsichtbar verstaut. Die herausgezoomte Perspektive zeigt, wie harmonisch sich das System ins gesamte Workspace-Design integriert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERAKTIVER MATERIAL-KONFIGURATOR (Smooth-Click) -->
+    <section id="konfigurator" class="config-section animate-fade-up">
+        <div class="section-header">
+            <h2>Wählen Sie Ihre Ausführung</h2>
+            <p class="section-subtitle">Klicken Sie auf ein Material, um Farben, Längen und Details flüssig anzuzeigen</p>
+        </div>
+
+        <div class="config-container">
+            <!-- Linke Seite: Tabs -->
+            <div class="config-tabs">
+                <div class="tab-card active" onclick="switchProduct('kunstleder', this)">
+                    <div class="tab-icon">✨</div>
+                    <div class="tab-info-text">
+                        <h3>Premium Kunstleder</h3>
+                        <p>Edel, glatt, extrem repräsentativ</p>
+                    </div>
+                </div>
+                <div class="tab-card" onclick="switchProduct('polyester', this)">
+                    <div class="tab-icon">🧵</div>
+                    <div class="tab-info-text">
+                        <h3>Hochleistungs-Polyester</h3>
+                        <p>Robust, flexibel, wohnlicher Textil-Look</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechte Seite: Dynamischer Wechsel -->
+            <div class="config-content-wrapper">
                 
-                <div class="timeline-item reveal-left">
-                    <div class="time-box">Dez. 2025 - Heute</div>
-                    <div class="time-content expandable glow-card">
-                        <div class="time-header">
-                            <div>
-                                <h3>Wieland Group</h3>
-                                <p class="role">Bachelorarbeit & Werkstudent – SAP BTP</p>
+                <!-- CONTENT KUNSTLEDER -->
+                <div id="content-kunstleder" class="config-content active">
+                    <div class="config-details">
+                        <div class="config-text-side">
+                            <span class="material-badge">Executive Line</span>
+                            <h3>Exklusives Kunstleder-Finish</h3>
+                            <p>Die perfekte Wahl für Chefzimmer, Design-Büros und alle, die eine makellose Lederoptik schätzen. Schmutzabweisend und leicht abwischbar.</p>
+                            
+                            <div class="spec-group">
+                                <h4>Verfügbare Farben:</h4>
+                                <div class="color-tags">
+                                    <span class="color-tag"><span class="dot black"></span> Schwarz</span>
+                                    <span class="color-tag"><span class="dot white"></span> Weiß</span>
+                                    <span class="color-tag"><span class="dot grey"></span> Grau</span>
+                                </div>
                             </div>
-                            <div class="expand-indicator">+</div>
+
+                            <div class="spec-group">
+                                <h4>Verfügbare Längen:</h4>
+                                <div class="size-tags">
+                                    <span>50 cm</span><span>100 cm</span><span>150 cm</span><span>200 cm</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content-details">
-                            <p class="desc">Fokus auf die Architektur und Absicherung moderner Cloud-Umgebungen innerhalb der SAP Business Technology Platform (BTP).</p>
-                            <ul class="task-list">
-                                <li><strong>SAP BTP Security:</strong> Konzeptionierung und Implementierung von feingranularen Berechtigungsmodellen in der Cloud Foundry Umgebung.</li>
-                                <li><strong>Innovation:</strong> Evaluierung von <em>Joule AI</em> und dem <em>Business Application Studio</em> zur Beschleunigung von Entwicklungsprozessen (CAP Modell).</li>
-                                <li><strong>Cloud Integration:</strong> Aufbau von Side-by-Side Extensions, um den S/4HANA Core „clean“ zu halten (Clean Core Strategie).</li>
-                                <li><strong>Fiori Deployment:</strong> Unterstützung beim Lifecycle Management von Fiori Apps über die SAP BTP Launchpad Services.</li>
-                            </ul>
+                        <div class="config-image-side">
+                            <img src="bilder/3 Farben Kunstleder final.jpg" alt="ASKA Kunstleder Farbvarianten">
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item reveal-right">
-                    <div class="time-box">2023 - 2025</div>
-                    <div class="time-content expandable glow-card">
-                        <div class="time-header">
-                            <div>
-                                <h3>Wieland Group</h3>
-                                <p class="role">Werkstudent – SAP Authorization</p>
+                <!-- CONTENT POLYESTER -->
+                <div id="content-polyester" class="config-content">
+                    <div class="config-details">
+                        <div class="config-text-side">
+                            <span class="material-badge">Comfort Line</span>
+                            <h3>Robustes Polyester-Gewebe</h3>
+                            <p>Extrem strapazierfähig und langlebig. Schmiegt sich elastisch um jede Kabelmenge und bietet eine warme, moderne Textur für smarte Wohn- und Arbeitsräume.</p>
+                            
+                            <div class="spec-group">
+                                <h4>Verfügbare Farben:</h4>
+                                <div class="color-tags">
+                                    <span class="color-tag"><span class="dot anthracite"></span> Anthrazit</span>
+                                    <span class="color-tag"><span class="dot white"></span> Weiß</span>
+                                    <span class="color-tag"><span class="dot grey"></span> Grau</span>
+                                </div>
                             </div>
-                            <div class="expand-indicator">+</div>
+
+                            <div class="spec-group">
+                                <h4>Verfügbare Längen:</h4>
+                                <div class="size-tags">
+                                    <span>50 cm</span><span>100 cm</span><span>150 cm</span><span>200 cm</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content-details">
-                            <p class="desc">Operative Betreuung der globalen SAP-Berechtigungsinfrastruktur für mehrere tausend User weltweit.</p>
-                            <ul class="task-list">
-                                <li><strong>Global Governance:</strong> Design und Wartung von komplexen Rollenstrukturen in S/4HANA (PFCG, SU24 Optimierung).</li>
-                                <li><strong>Compliance:</strong> Durchführung von Segregation of Duties (SoD) Analysen zur Vermeidung von kritischen Berechtigungskonflikten (GRC-Ansatz).</li>
-                                <li><strong>Modul-Support:</strong> Enge Zusammenarbeit mit Fachbereichen (FI, CO, SD, EWM), um prozessorientierte Zugriffsberechtigungen zu erstellen.</li>
-                                <li><strong>Reporting:</strong> Auswertung von SAP-Daten und Erstellung von Berichten zur Prozessoptimierung in der Benutzerverwaltung.</li>
-                            </ul>
+                        <div class="config-image-side">
+                            <img src="bilder/3 Farben Polyester final.jpg" alt="ASKA Polyester Farbvarianten">
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item reveal-left">
-                    <div class="time-box">2022 - 2023</div>
-                    <div class="time-content expandable glow-card">
-                        <div class="time-header">
-                            <div>
-                                <h3>Airbus</h3>
-                                <p class="role">Werkstudent – Systemadministration</p>
-                            </div>
-                            <div class="expand-indicator">+</div>
-                        </div>
-                        <div class="content-details">
-                            <p class="desc">Administration hochverfügbarer IT-Systeme in einem sicherheitskritischen Industrieumfeld.</p>
-                            <ul class="task-list">
-                                <li><strong>Infrastruktur:</strong> Administration von Windows Server-Umgebungen und Verwaltung von Gruppenrichtlinien (GPO) im Active Directory.</li>
-                                <li><strong>Monitoring:</strong> Überwachung der Netzwerkperformance mit <em>NetBossXT</em> und proaktives Troubleshooting bei Störungen.</li>
-                                <li><strong>Security:</strong> Betreuung der TETRA-Infrastruktur für die sicherheitskritische Kommunikation am Standort.</li>
-                                <li><strong>APIs:</strong> Unterstützung bei der Implementierung von Schnittstellen auf Basis von Java (SNMP) zur Systemüberwachung.</li>
-                            </ul>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERAKTIVE PRODUKT-ÜBERSICHT (Mit Detail-Popup/Modal) -->
+    <section id="produkte" class="products-section animate-fade-up">
+        <div class="section-header">
+            <h2>Unsere Systeme im Überblick</h2>
+            <p class="section-subtitle">Klicken Sie auf ein System für eine detaillierte Beschreibung, Bildergalerien und die Anleitung</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Produkt 1 -->
+            <div class="product-card" onclick="openProductModal('klett-schlauch')">
+                <div class="card-img-container">
+                    <img src="bilder/Schlauch offen mit Kabeln.jpg" alt="Flexibler Klettverschluss-Kabelschlauch">
+                </div>
+                <div class="card-content">
+                    <h2>Flexibler Klettverschluss-Kabelschlauch</h2>
+                    <p>Die flexible und wiederverschließbare Allround-Lösung für Schreibtische und TV-Boards. Kabel lassen sich an jeder beliebigen Stelle kinderleicht ein- und ausfädeln.</p>
+                    <span class="btn-more">Details & Anleitung ansehen</span>
+                </div>
+            </div>
+
+            <!-- Produkt 2 -->
+            <div class="product-card" onclick="openProductModal('klebe-kanal')">
+                <div class="card-img-container">
+                    <img src="bilder/Klettverschluss ohne Hand Grau.jpg" alt="Selbstklebender Gewebe-Kabelkanal">
+                </div>
+                <div class="card-content">
+                    <h2>Selbstklebender Gewebe-Kabelkanal</h2>
+                    <p>Flache, feste Kabelführung für Wände, Möbel oder Tischunterseiten. Bleibt dank extrastarkem Klebestreifen dauerhaft in Position, während die Oberseite flexibel bleibt.</p>
+                    <span class="btn-more">Details & Anleitung ansehen</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title reveal-up">Tech Stack & IT-Expertise</h2>
-            <div class="skills-container">
-                <div class="skill-category reveal-up glow-card">
-                    <div class="category-header">
-                        <span class="category-icon">🚀</span>
-                        <h3>SAP Core & Innovation</h3>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-tags">
-                            <span>S/4HANA (ERP, BI, Fiori)</span>
-                            <span>Authorization (PFCG, SU01, SU24)</span>
-                            <span>SAP BTP (Cockpit, Extension)</span>
-                            <span>Joule AI & CAP</span>
-                            <span>Side-by-Side Extensions</span>
-                            <span>SAP FI/CO/SD </span>
-                        </div>
-                    </div>
-                </div>
+    <!-- INTERAKTIVES POPUP / MODAL -->
+    <div class="modal" id="productModal" onclick="closeProductModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="document.getElementById('productModal').classList.remove('active')">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamischer Inhalt wird hier eingefügt -->
+            </div>
+        </div>
+    </div>
 
-                <div class="skill-category reveal-up glow-card">
-                    <div class="category-header">
-                        <span class="category-icon">🛡️</span>
-                        <h3>Infrastructure & Security</h3>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-tags">
-                            <span>Active Directory</span>
-                            <span>Netzwerkadministration</span>
-                            <span>Monitoring (NetBossXT)</span>
-                            <span>TETRA Communication</span>
-                            <span>Windows & Linux Server</span>
-                            <span>Cloud Security</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- ALLGEMEINE PRODUKTDETAILS IM FLUSS -->
+    <section id="details" class="details-section animate-fade-up">
+        <div class="section-header">
+            <h2>Durchdacht bis ins kleinste Detail</h2>
+            <p class="section-subtitle">Erfahren Sie, warum ASKA die eleganteste Lösung auf dem Markt ist</p>
+        </div>
 
-                <div class="skill-category reveal-up glow-card">
-                    <div class="category-header">
-                        <span class="category-icon">💻</span>
-                        <h3>Development & Integration</h3>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-tags">
-                            <span>Java (SNMP)</span>
-                            <span>Python</span>
-                            <span>HTML5 / CSS / UI5</span>
-                            <span>REST-APIs (JSON)</span>
-                            <span>SQL</span>
-                        </div>
-                    </div>
+        <div class="details-story">
+            <!-- Block 1 -->
+            <div class="story-row">
+                <div class="story-text">
+                    <h3>Werkzeuglose Montage & Klett-Innovation</h3>
+                    <p>Kein Bohren, kein Schrauben. Durch den intelligenten Klettverschluss lässt sich das System sekundenschnell öffnen, erweitern oder schließen. Zudem haftet die raue Struktur direkt von Natur aus auf speziellen Messeteppichen – die perfekte Lösung für Events.</p>
                 </div>
+                <div class="story-images side-by-side">
+                    <img src="bilder/Klettverschluss.jpg" alt="Klettverschluss Detail">
+                    <img src="bilder/Klettverschluss ohne Hand Grau.jpg" alt="Klettverschluss Struktur">
+                </div>
+            </div>
 
-                <div class="skill-category reveal-up glow-card">
-                    <div class="category-header">
-                        <span class="category-icon">📊</span>
-                        <h3>Analytics & Operations</h3>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-tags">
-                            <span>SAP Rollouts & Updates</span>
-                            <span>Testing & Dokumentation</span>
-                            <span>Dashboards</span>
-                            <span>User Lifecycle Management</span>
-                        </div>
-                    </div>
+            <!-- Block 2 -->
+            <div class="story-row reverse">
+                <div class="story-text">
+                    <h3>Flexibler Durchmesser für jeden Einsatzzweck</h3>
+                    <p>Egal ob ein einzelnes HDMI-Kabel oder ein dicker Kabelstrang inklusive Mehrfachstecker-Zuleitung: Der Durchmesser passt sich vollkommen variabel an Ihre Bedürfnisse an.</p>
+                </div>
+                <div class="story-images side-by-side">
+                    <img src="bilder/Schlauch offen mit Kabeln.jpg" alt="Schlauch geöffnet">
+                    <img src="bilder/Schlauch offen mit Kabeln (2).jpg" alt="Kabeldurchführung flexibel">
+                </div>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="story-row">
+                <div class="story-text">
+                    <h3>Unsichtbare Kabelführung unter dem Tisch</h3>
+                    <p>Mit dem im Lieferumfang enthaltenen Klett-Klebeband fixieren Sie den Schlauch unauffällig direkt unter der Tischplatte, entlang der Traversen oder nahtlos am Tischbein.</p>
+                </div>
+                <div class="story-images grid-3">
+                    <img src="bilder/Unter dem Tisch schwarz.jpg" alt="Montage unter Tisch">
+                    <img src="bilder/Unter dem Tisch schwarz mit Kabeln.jpg" alt="Kabel unsichtbar verlegt">
+                    <img src="bilder/Unter dem Tisch weis beide Hände.jpg" alt="Einfache Installation">
+                </div>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="story-row reverse">
+                <div class="story-text">
+                    <h3>Perfekte Harmonie an jedem Setup</h3>
+                    <p>Ob am modernen Gaming-PC, am minimalistischen Homeoffice-Arbeitsplatz oder am edlen Konferenztisch aus Echtholz: ASKA fügt sich nahtlos in die Umgebung ein.</p>
+                </div>
+                <div class="story-images grid-3">
+                    <img src="bilder/Schwarzes mit Kabeln 2.jpg" alt="Schwarzes Setup Kabel">
+                    <img src="bilder/Alle Farben ohne Kabeln quer  JPG.jpg" alt="Alle Farben sortiert">
+                    <img src="bilder/Schlauch am Schreibtischtischbein.jpg" alt="Kabelführung am Tischbein hinten">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title reveal-up">Bildungsweg</h2>
-            <div class="grid-2">
-                <div class="glass-card reveal-left glow-card">
-                    <h3>TH Ulm</h3>
-                    <p class="role">B.Sc. Informatik (seit 2021) - vsl. 04.2026</p>
-                    <p class="desc">Vertiefung in Software Engineering und Cloud-Infrastrukturen.</p>
+    <!-- FOOTER MIT RECHTSSICHEREM IMPRESSUM -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-text">ASKA</span> <span class="logo-sub">PRODUCTS</span>
                 </div>
-                <div class="glass-card reveal-right glow-card">
-                    <h3>Häussler Medizintechnik</h3>
-                    <p class="role">Fachinformatiker Systemintegration (2017-2020)</p>
-                    <p class="desc">Berufsausbildung mit Schwerpunkt Netzwerk- und Systemtechnik. Abschlussarbeit: Active Directory Server</p>
-                </div>
+                <p class="footer-description">Premium-Kabelmanagement für Arbeitsplätze, Homeoffice und High-End Setups. Sauber. Praktisch. Unsichtbar.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#vergleich">Vorher / Nachher</a></li>
+                    <li><a href="#konfigurator">Materialien</a></li>
+                    <li><a href="#produkte">Produkte</a></li>
+                    <li><a href="#details">Details</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-impressum" id="impressum">
+                <h4>Impressum</h4>
+                <p><strong>ASKA Products</strong></p>
+                <p>Widdersteinstr. 35<br>88400 Biberach an der Riß</p>
+                <p style="margin-top: 10px;">Tel.: +49 157 58731359</p>
+                <p>E-Mail: <a href="mailto:info@aska-products.de">info@aska-products.de</a></p>
+                <p style="margin-top: 14px; font-size: 13px; color: #717784;">
+                    Steuernummer: 54011/28635<br>
+                    USt-Id-Nr.: DE341318465
+                </p>
+                <p style="margin-top: 8px; font-size: 13px; color: #717784;">
+                    <strong>Gesellschafter:</strong><br>
+                    Bünyamin Kalkisim, Yasin Aslan
+                </p>
             </div>
         </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="container reveal-up">
-            <h2>Kontakt</h2>
-            <div class="contact-links">
-                <a href="mailto:yilmaz.2000@gmx.de" class="contact-item">yilmaz.2000@gmx.de</a>
-                <p>89257 Illertissen, Deutschland</p>
-            </div>
-            <p class="copyright">© 2026 Alper Yilmaz | SAP & IT Expertise</p>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 ASKA PRODUCTS. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- INTERAKTIVES JAVASCRIPT -->
+    <script>
+        function switchProduct(type, element) {
+            document.querySelectorAll('.tab-card').forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+
+            document.querySelectorAll('.config-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const targetContent = document.getElementById('content-' + type);
+            if(targetContent) {
+                targetContent.classList.add('active');
+            }
+        }
+
+        const productData = {
+            'klett-schlauch': {
+                title: 'Flexibler Klettverschluss-Kabelschlauch (Premium Gewebe)',
+                description: 'Vergiss unordentlichen Kabelsalat hinter dem PC oder Fernseher. Unser flexibler Gewebe-Schlauch mit Klettverschluss passt sich perfekt an deine Kabelstränge an. Das strapazierfähige Material schützt deine Kabel vor Staub, Abnutzung und sogar Haustierbissen, während es gleichzeitig für eine cleane Optik sorgt. Das Beste: Kabel können an jeder beliebigen Stelle einfach seitlich herausgeführt werden!',
+                instructions: [
+                    '<strong>Bündeln:</strong> Lege alle Kabel, die du verstecken möchtest, parallel nebeneinander.',
+                    '<strong>Umschließen:</strong> Lege den geöffneten Kabelschlauch um das Kabelbündel.',
+                    '<strong>Kletten:</strong> Drücke den Klettverschluss über die gesamte Länge fest zusammen.',
+                    '<strong>Anpassen (Optional):</strong> Falls ein Kabel früher abzweigen muss (z. B. zum Lautsprecher), öffne den Klettverschluss an dieser Stelle minimal und führe das Kabel seitlich heraus.'
+                ],
+                images: [
+                    'bilder/Schlauch offen mit Kabeln.jpg',
+                    'bilder/Schlauch offen mit Kabeln (2).jpg',
+                    'bilder/Schlauch am Schreibtisch 2.jpg',
+                    'bilder/Schlauch am Schreibtischtischbein.jpg'
+                ]
+            },
+            'klebe-kanal': {
+                title: 'Selbstklebender Gewebe-Kabelkanal (Festmontage)',
+                description: 'Die perfekte Alternative zu klobigen Plastik-Kabelkanälen. Dieser flache Gewebe-Kanal wird einfach dorthin geklebt, wo Kabel unsichtbar entlanglaufen sollen – zum Beispiel unter die Tischplatte oder an das Schreibtischbein. Durch das clevere System bleibt die Basis fest angeklebt, während du den Schlauchteil dank Klettverschluss jederzeit öffnen kannst, um neue Kabel hinzuzufügen oder zu entfernen.',
+                instructions: [
+                    '<strong>Oberfläche reinigen:</strong> Die gewünschte Stelle (z. B. Unterseite der Tischplatte) muss trocken, staub- und fettfrei sein.',
+                    '<strong>Kleben:</strong> Ziehe die Schutzfolie vom Klebestreifen ab und drücke den Kanal für ca. 30 Sekunden fest an die Oberfläche.',
+                    '<strong>Warten:</strong> Lass den Kleber am besten ein paar Stunden ohne Last ungestört haften, um maximale Tragkraft zu garantieren.',
+                    '<strong>Kabel einlegen:</strong> Öffne den Klettverschluss, lege deine Kabel hinein und klette den Schlauch wieder zu.'
+                ],
+                images: [
+                    'bilder/Klettverschluss ohne Hand Grau.jpg',
+                    'bilder/Klettverschluss.jpg',
+                    'bilder/Unter dem Tisch schwarz.jpg',
+                    'bilder/Unter dem Tisch schwarz mit Kabeln.jpg',
+                    'bilder/Schwarzes mit Kabeln 2.jpg'
+                ]
+            }
+        };
+
+        function openProductModal(id) {
+            const data = productData[id];
+            const modalBody = document.getElementById('modalBody');
+            
+            let thumbsHtml = '';
+            data.images.forEach((img, i) => {
+                thumbsHtml += `<img src="${img}" class="thumbnail ${i === 0 ? 'active' : ''}" onclick="changePreview(this, '${img}')" alt="Vorschau">`;
+            });
+
+            let stepsHtml = '';
+            data.instructions.forEach((step, index) => {
+                stepsHtml += `
+                    <li>
+                        <span class="step-number">${index + 1}</span>
+                        <div class="step-text">${step}</div>
+                    </li>`;
+            });
+
+            modalBody.innerHTML = `
+                <div class="gallery-container">
+                    <div class="main-preview">
+                        <img id="mainPreviewImg" src="${data.images[0]}" alt="${data.title}">
+                    </div>
+                    <div class="thumbnail-list">
+                        ${thumbsHtml}
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>${data.title}</h2>
+                    <h3>Produktbeschreibung</h3>
+                    <p class="modal-desc">${data.description}</p>
+                    <h3>Schritt-für-Schritt Anleitung</h3>
+                    <ul class="instruction-list">
+                        ${stepsHtml}
+                    </ul>
+                </div>
+            `;
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function changePreview(thumb, src) {
+            document.getElementById('mainPreviewImg').src = src;
+            thumb.parentElement.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function closeProductModal(e) {
+            if(e.target.id === 'productModal') {
+                document.getElementById('productModal').classList.remove('active');
+            }
+        }
+    </script>
 </body>
 </html>
