@@ -24,10 +24,11 @@
         <nav>
             <ul>
                 <li><a href="#" class="active" onclick="closeMobileMenu()">Home</a></li>
-                <li><a href="#vergleich" onclick="closeMobileMenu()">Vergleich</a></li>
+                <li><a href="#vergleich" onclick="closeMobileMenu()">Warum ASKA</a></li>
                 <li><a href="#konfigurator" onclick="closeMobileMenu()">Materialien</a></li>
                 <li><a href="#produkte" onclick="closeMobileMenu()">Produkte</a></li>
                 <li><a href="#details" onclick="closeMobileMenu()">Details</a></li>
+                <li><a href="#kontakt" onclick="closeMobileMenu()">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +37,7 @@
         <div class="hero-content">
             <span class="hero-badge">⚡ Workspace Upgrade</span>
             <h1>Die Revolution des Kabelmanagements.</h1>
-            <p class="hero-tagline">Schluss mit unschönem Kabelsalat! Unsere Premium-Lösungen vereinen edles Design mit maximaler Flexibilität – für ein sauberes Setup im Handumdrehen.</p>
+            <p class="hero-tagline">Schluss mit unschönem Kabelsalat! Unsere Premium-Kabelkanäle vereinen edles Design mit maximaler Flexibilität – für ein sauberes Setup im Handumdrehen.</p>
             <div class="hero-features">
                 <span class="feature-tag">Ohne Werkzeug</span>
                 <span class="feature-tag">Flexibler Klett</span>
@@ -45,36 +46,72 @@
             <a href="#produkte" class="btn-dark">Jetzt Produkte entdecken</a>
         </div>
         <div class="hero-image">
-            <img src="bilder/Schlauch am Schreibtisch 2.jpg" alt="ASKA Kabelmanagement im Einsatz">
+            <img src="bilder/Schlauch am Schreibtisch 2.jpg" alt="ASKA Kabelmanagement im Einsatz" id="heroProductImage">
         </div>
     </section>
 
     <section id="vergleich" class="comparison-section animate-fade-up">
         <div class="section-header">
-            <h2>Der Vorher-Nachher Effekt</h2>
-            <p class="section-subtitle">Erleben Sie den Unterschied: Verwandeln Sie Chaos in pure Ästhetik</p>
+            <h2>Vom Kabelchaos zur perfekten Ordnung</h2>
+            <p class="section-subtitle">Vergessen Sie klobige Plastikkanäle. Unser Gewebe-System bietet maximale Flexibilität, edle Optik und sekundenschnelle Handhabung im Alltag.</p>
         </div>
         
-        <div class="comparison-grid">
-            <div class="comparison-card before">
-                <div class="comp-badge">Vorher</div>
-                <div class="comp-img-wrapper">
-                    <img src="bilder/Kabeln am Schreibtischtischbein.jpg" alt="Kabelchaos vor der Nutzung">
+        <div class="why-aska-container">
+            <div class="benefits-side">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚙️</div>
+                    <div class="benefit-text">
+                        <h4>Gewebe-Flexibilität statt starrem Plastik</h4>
+                        <p>Herkömmliche Plastikkanäle brechen leicht, sind sperrig und lassen sich nur schwer um Ecken biegen. Das ASKA Gewebe folgt flexibel jedem Kabelknick und jeder Bewegung von höhenverstellbaren Schreibtischen.</p>
+                    </div>
                 </div>
-                <div class="comp-text">
-                    <h4>Kabelsalat & Ablenkung</h4>
-                    <p>Ungeordnete Kabel stören die Konzentration, fangen extrem viel Staub und zerstören die Optik eines hochwertigen Raumes.</p>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-text">
+                        <h4>Kabelwechsel in Sekunden</h4>
+                        <p>Kein mühsames Aufhebeln von Plastikclips, bei denen man sich die Finger einklemmt. Unser Klettverschluss öffnet sich geschmeidig auf ganzer Länge und schließt sich genau so schnell wieder.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏡</div>
+                    <div class="benefit-text">
+                        <h4>Wohnliches Design & Möbelschutz</h4>
+                        <p>Plastik wirkt billig und industriell. ASKA setzt auf Textil und Leder, das sich wie ein hochwertiges Accessoire in Ihre Einrichtung integriert, ohne Kratzer an teuren Tischbeinen zu hinterlassen.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📐</div>
+                    <div class="benefit-text">
+                        <h4>Variabler Durchmesser</h4>
+                        <p>Egal ob 2 dünne USB-Kabel oder 8 dicke Stromkabel – der Kanal wächst flexibel mit. Er ist nie zu groß oder zu klein und sieht dadurch immer maßgeschneidert aus.</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="comparison-card after">
-                <div class="comp-badge">Nachher</div>
-                <div class="comp-img-wrapper">
-                    <img src="bilder/Schlauch am Schreibtischtischbein.jpg" alt="Saubere Gesamtübersicht mit ASKA">
+
+            <div class="comparison-grid-side">
+                <div class="comparison-card before-card">
+                    <div class="comp-badge before-badge">Vorher</div>
+                    <div class="comp-img-wrapper">
+                        <img src="bilder/Kabeln am Schreibtischtischbein.jpg" alt="Kabelchaos vor der Nutzung">
+                    </div>
+                    <div class="comp-text">
+                        <h4>Visuelle Unruhe & Staubfänger</h4>
+                        <p>Lose Kabel stören die Konzentration, fangen extrem viel Staub und zerstören das stilvolle Ambiente des Raumes.</p>
+                    </div>
                 </div>
-                <div class="comp-text">
-                    <h4>Saubere Eleganz im Raum</h4>
-                    <p>Gebündelt, geschützt und unsichtbar verstaut. Die herausgezoomte Perspektive zeigt, wie harmonisch sich das System ins gesamte Workspace-Design integriert.</p>
+                
+                <div class="comparison-card after-card">
+                    <div class="comp-badge after-badge">Nachher</div>
+                    <div class="comp-img-wrapper">
+                        <img src="bilder/Schlauch am Schreibtischtischbein.jpg" alt="Saubere Gesamtübersicht mit ASKA">
+                    </div>
+                    <div class="comp-text">
+                        <h4>Saubere Eleganz im Raum</h4>
+                        <p>Gebündelt, geschützt und unsichtbar verstaut. Das flexible System integriert sich perfekt ins Workspace-Design.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +120,7 @@
     <section id="konfigurator" class="config-section animate-fade-up">
         <div class="section-header">
             <h2>Wählen Sie Ihre Ausführung</h2>
-            <p class="section-subtitle">Klicken Sie auf ein Material, um Farben, Längen und Details flüssig anzuzeigen</p>
+            <p class="section-subtitle">Klicken Sie auf ein Material, um Farben, Längen und Details flüssig anzuzeigen. Tippe auf eine Farbe, um das Vorschaubild zu wechseln.</p>
         </div>
 
         <div class="config-container">
@@ -106,6 +143,7 @@
 
             <div class="config-content-wrapper">
                 
+                <!-- KUNSTLEDER: Anthrazit, Beige, Weiß -->
                 <div id="content-kunstleder" class="config-content active">
                     <div class="config-details">
                         <div class="config-text-side">
@@ -114,11 +152,11 @@
                             <p>Die perfekte Wahl für Chefzimmer, Design-Büros und alle, die eine makellose Lederoptik schätzen. Schmutzabweisend und leicht abwischbar.</p>
                             
                             <div class="spec-group">
-                                <h4>Verfügbare Farben:</h4>
+                                <h4>Verfügbare Farben (Klicken zum Wechseln):</h4>
                                 <div class="color-tags">
-                                    <span class="color-tag"><span class="dot black"></span> Schwarz</span>
-                                    <span class="color-tag"><span class="dot white"></span> Weiß</span>
-                                    <span class="color-tag"><span class="dot grey"></span> Grau</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/Kunstleder_aska.jpeg"><span class="dot anthracite"></span> Anthrazit</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/Kunstleder_aska.jpeg"><span class="dot beige"></span> Beige</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/Unter dem Tisch weis beide Hände.jpg"><span class="dot white"></span> Weiss</span>
                                 </div>
                             </div>
 
@@ -130,24 +168,25 @@
                             </div>
                         </div>
                         <div class="config-image-side">
-                            <img src="bilder/3 Farben Kunstleder final.jpg" alt="ASKA Kunstleder Farbvarianten">
+                            <img src="bilder/Kunstleder_aska.jpeg" alt="ASKA Kunstleder Originalansicht" id="preview-kunstleder" class="original-fit-img">
                         </div>
                     </div>
                 </div>
 
+                <!-- POLYESTER: Schwarz, Weiß, Grau -->
                 <div id="content-polyester" class="config-content">
                     <div class="config-details">
                         <div class="config-text-side">
                             <span class="material-badge">Comfort Line</span>
-                            <h3>Robustes Polyester-Gewebe</h3>
-                            <p>Extrem strapazierfähig und langlebig. Schmiegt sich elastisch um jede Kabelmenge und bietet eine warme, moderne Textur für smarte Wohn- und Arbeitsräume.</p>
+                            <h3>Selbstklebender Gewebekanal</h3>
+                            <p>In nur 2–3 Minuten einsatzbereit. Perfekt für die schnelle, saubere Verlegung direkt auf dem Boden oder unter dem Tisch. Extrem strapazierfähig und langlebig.</p>
                             
                             <div class="spec-group">
-                                <h4>Verfügbare Farben:</h4>
+                                <h4>Verfügbare Farben (Klicken zum Wechseln):</h4>
                                 <div class="color-tags">
-                                    <span class="color-tag"><span class="dot anthracite"></span> Anthrazit</span>
-                                    <span class="color-tag"><span class="dot white"></span> Weiß</span>
-                                    <span class="color-tag"><span class="dot grey"></span> Grau</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/polyester_aska.jpeg"><span class="dot black"></span> Schwarz</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/Unter dem Tisch weis beide Hände.jpg"><span class="dot white"></span> Weiss</span>
+                                    <span class="color-tag interactive-color" data-image="bilder/Schlauch am Schreibtisch 2.jpg"><span class="dot grey"></span> Grau</span>
                                 </div>
                             </div>
 
@@ -159,7 +198,7 @@
                             </div>
                         </div>
                         <div class="config-image-side">
-                            <img src="bilder/3 Farben Polyester final.jpg" alt="ASKA Polyester Farbvarianten">
+                            <img src="bilder/polyester_aska.jpeg" alt="ASKA Polyester Originalansicht" id="preview-polyester" class="original-fit-img">
                         </div>
                     </div>
                 </div>
@@ -203,62 +242,164 @@
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="close-modal" onclick="document.getElementById('productModal').classList.remove('active')">&times;</button>
             <div class="modal-body" id="modalBody">
-                </div>
+            </div>
         </div>
     </div>
 
-    <section id="details" class="details-section animate-fade-up">
+<section id="details" class="details-section animate-fade-up">
         <div class="section-header">
             <h2>Durchdacht bis ins kleinste Detail</h2>
-            <p class="section-subtitle">Erfahren Sie, warum ASKA die eleganteste Lösung auf dem Markt ist</p>
+            <p class="section-subtitle">Erfahren Sie, warum ASKA die eleganteste und sicherste Lösung auf dem Markt ist</p>
         </div>
 
         <div class="details-story">
+            
+            <!-- 1. SPARTE: FLAMMENHEMMEND (Bild jetzt voll sichtbar und linksbündig ausgerichtet) -->
             <div class="story-row">
                 <div class="story-text">
-                    <h3>Werkzeuglose Montage & Klett-Innovation</h3>
-                    <p>Kein Bohren, kein Schrauben. Durch den intelligenten Klettverschluss lässt sich das System sekundenschnell öffnen, erweitern oder schließen. Zudem haftet die raue Struktur direkt von Natur aus auf speziellen Messeteppichen – die perfekte Lösung für Events.</p>
+                    <span class="material-badge" style="background: #fff0f0; color: #e03131; border: 1px solid #ffc9c9; font-weight: 600; padding: 4px 10px; border-radius: 20px; font-size: 13px;">🔥 Maximale Sicherheit</span>
+                    <h3 style="margin-top: 10px;">Zertifizierter Brandschutz an Ihrem Arbeitsplatz</h3>
+                    <p>Wo viel Technik im Einsatz ist, hat Sicherheit oberste Priorität. Die ASKA Kabelmanagement-Systeme bieten Ihnen verlässlichen Schutz im Alltag: Unsere Materialien besitzen <strong>flammhemmende Eigenschaften</strong>. Dieser zertifizierte Schutz gilt uneingeschränkt sowohl für unsere robusten <strong>Polyester-Gewebekanäle</strong> als auch für die edle <strong>Kunstleder-Ausführung</strong>. So bewahren Sie im Ernstfall einen kühlen Kopf.</p>
                 </div>
-                <div class="story-images side-by-side">
-                    <img src="bilder/Klettverschluss.jpg" alt="Klettverschluss Detail">
-                    <img src="bilder/Klettverschluss ohne Hand Grau.jpg" alt="Klettverschluss Struktur">
+                <div class="story-images single-highlight-fix">
+                    <img src="bilder/bild_flammenhemmend.jpeg" alt="ASKA Kabelmanagement Flammhemmend für Polyester und Kunstleder" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
                 </div>
             </div>
 
+            <!-- 2. SPARTE: MESSETEPPICH (Bild jetzt zentriert und harmonisch im Fluss) -->
             <div class="story-row reverse">
                 <div class="story-text">
-                    <h3>Flexibler Durchmesser für jeden Einsatzzweck</h3>
-                    <p>Egal ob ein einzelnes HDMI-Kabel oder ein dicker Kabelstrang inklusive Mehrfachstecker-Zuleitung: Der Durchmesser passt sich vollkommen variabel an Ihre Bedürfnisse an.</p>
+                    <h3>Werkzeuglose Befestigung auf Messeteppichen</h3>
+                    <p>Kein Bohren, kein Schrauben, kein lästiges Klebeband. Durch das innovative Spezialgewebe heftet sich das ASKA System direkt von Natur aus bombenfest auf Messeteppichen und wissenschaftlich strukturierten Teppichböden. Ideal für Messestände, Ausstellungen, Events und moderne Office-Flächen.</p>
                 </div>
-                <div class="story-images side-by-side">
-                    <img src="bilder/Schlauch offen mit Kabeln.jpg" alt="Schlauch geöffnet">
-                    <img src="bilder/Schlauch offen mit Kabeln (2).jpg" alt="Kabeldurchführung flexibel">
+                <div class="story-images single-highlight-fix">
+                    <img src="bilder/punkt6_teppicbodenkabelkanal.jpeg" alt="Kabelkanal auf Teppichboden fixiert" style="width: 100%; max-width: 500px; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
                 </div>
             </div>
 
+            <!-- 3. SPARTE: UNTER DEM TISCH (Hier passen die 4 Bilder im Grid) -->
             <div class="story-row">
                 <div class="story-text">
                     <h3>Unsichtbare Kabelführung unter dem Tisch</h3>
-                    <p>Mit dem im Lieferumfang enthaltenen Klett-Klebeband fixieren Sie den Schlauch unauffällig direkt unter der Tischplatte, entlang der Traversen oder nahtlos am Tischbein.</p>
+                    <p>Mithilfe des beiliegenden, starken Klett-Klebebands befestigst du deine Kabelführung unsichtbar direkt unter der Schreibtischplatte. Perfekt, um Kabelwege entlang der Traversen oder direkt am Gestell komplett verschwinden zu lassen.</p>
                 </div>
-                <div class="story-images grid-3">
-                    <img src="bilder/Unter dem Tisch schwarz.jpg" alt="Montage unter Tisch">
-                    <img src="bilder/Unter dem Tisch schwarz mit Kabeln.jpg" alt="Kabel unsichtbar verlegt">
-                    <img src="bilder/Unter dem Tisch weis beide Hände.jpg" alt="Einfache Installation">
+                <div class="story-images side-by-side">
+                    <img src="bilder/punkt7_bilder.jpeg" alt="Klettband vorbereiten">
+                    <img src="bilder/punkt7_bilder2.jpeg" alt="Montage unter dem Tisch">
+                    <img src="bilder/Unter dem Tisch schwarz.jpg" alt="Kabelkanal Schwarz unter dem Tisch">
+                    <img src="bilder/Unter dem Tisch weis beide Hände.jpg" alt="Kabelkanal Weiß Montage unter dem Tisch">
                 </div>
             </div>
 
+            <!-- 4. SPARTE: FARBHARMONIE -->
             <div class="story-row reverse">
                 <div class="story-text">
-                    <h3>Perfekte Harmonie an jedem Setup</h3>
-                    <p>Ob am modernen Gaming-PC, am minimalistischen Homeoffice-Arbeitsplatz oder am edlen Konferenztisch aus Echtholz: ASKA fügt sich nahtlos in die Umgebung ein.</p>
+                    <h3>Perfekte Harmonie für jedes Design Setup</h3>
+                    <p>Egal ob minimalistisches Studio in hellem Weiß, klassischer Workspace in edlem Grau oder High-End Gaming-Station in tiefem Schwarz: Die Farbvarianten sind perfekt aufeinander abgestimmt, um sich unauffällig in dein Interieur einzufügen.</p>
                 </div>
-                <div class="story-images grid-3">
-                    <img src="bilder/Schwarzes mit Kabeln 2.jpg" alt="Schwarzes Setup Kabel">
-                    <img src="bilder/Alle Farben ohne Kabeln quer  JPG.jpg" alt="Alle Farben sortiert">
-                    <img src="bilder/Schlauch am Schreibtischtischbein.jpg" alt="Kabelführung am Tischbein hinten">
+                <div class="story-images split-preview">
+                    <img src="bilder/punkt8_bilder1.jpeg" alt="Weißer Kabelkanal an Wand">
+                    <img src="bilder/polyester_aska.jpeg" alt="Farbpalette Übersicht">
                 </div>
             </div>
+
+            <!-- 5. SPARTE: GEWEBE-STRUKTUR -->
+            <div class="story-row">
+                <div class="story-text">
+                    <h3>Premium Gewebe-Struktur</h3>
+                    <p>Unser High-End Gewebeschlauch schützt sensible Daten- und Stromkabel sicher vor äußeren Einflüssen, Reibung und Staub. Das textile Design bricht das kalte Licht technischer Geräte und sorgt für wohnliche Eleganz im Arbeitsraum.</p>
+                </div>
+                <div class="story-images single-highlight-fix">
+                    <img src="bilder/punkt9_bild1.jpeg" alt="Premium Gewebe Nahaufnahme" style="width: 100%; max-width: 500px; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Die 7 Merkmale ohne Nummerierung -->
+    <section class="features-list-section animate-fade-up">
+        <div class="section-header">
+            <h2>Wichtige Produktmerkmale</h2>
+            <p class="section-subtitle">Qualität und Funktionalität im Fokus – Alle Highlights im Überblick</p>
+        </div>
+
+        <div class="features-list-grid">
+            <div class="feature-item">
+                <div class="feature-item-icon">💎</div>
+                <h4>Hochwertige Materialkombination</h4>
+                <p>Robuster Polyester trifft auf edles Kunstleder – langlebig und stilvoll zugleich.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">🔄</div>
+                <h4>Maximale Flexibilität</h4>
+                <p>Kabel jederzeit individuell anpassen – ganz ohne Aufwand.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">📏</div>
+                <h4>Individuell anpassbarer Durchmesser</h4>
+                <p>Dank Klettverschluss flexibel erweiterbar oder verengbar – passend für jede Kabelmenge.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">⛺</div>
+                <h4>Werkzeuglose Befestigung auf Messeteppichen</h4>
+                <p>Haftet direkt auf speziellen Teppichen – ganz ohne Klebeband oder Kabelbinder.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">🛠️</div>
+                <h4>Flexible Montage unter Tischen</h4>
+                <p>Mit Klett-Klebeband einfach unter Tischplatten oder an Tischbeinen befestigen.</p>
+            </div>
+            <div class="feature-item flammhemmend-box">
+                <div class="flamm-text">
+                    <div class="feature-item-icon">🔥</div>
+                    <h4>Flammhemmendes Material</h4>
+                    <p>Sicher im Einsatz – schwer entflammbar für erhöhten Schutz an jedem Arbeitsplatz.</p>
+                </div>
+                <img src="bilder/aksa_beschreibung.jpg" alt="Flammhemmend Nachweis" class="flamm-img">
+            </div>
+            <div class="feature-item">
+                <div class="feature-item-icon">🎨</div>
+                <h4>Verschiedene Größen & Farben</h4>
+                <p>Erhältlich in 50–200 cm sowie in Schwarz, Weiß und Grau – passend für jedes Setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact-section animate-fade-up">
+        <div class="section-header">
+            <h2>Fragen oder Individualanfragen?</h2>
+            <p class="section-subtitle">Schreiben Sie uns eine Nachricht. Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+        </div>
+        
+        <div class="contact-container">
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail-Adresse *</label>
+                        <input type="email" id="email" name="email" required placeholder="name@beispiel.de">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Betreff</label>
+                    <input type="text" id="subject" name="subject" placeholder="Worum geht es? (z.B. Großbestellung, Sonderlänge)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ihre Nachricht *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                </div>
+                
+                <div class="form-privacy">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen dauerhaft gespeichert werden.</label>
+                </div>
+                
+                <button type="submit" class="btn-dark btn-submit">Nachricht absenden</button>
+            </form>
         </div>
     </section>
 
@@ -275,10 +416,11 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#vergleich">Vorher / Nachher</a></li>
+                    <li><a href="#vergleich">Warum ASKA</a></li>
                     <li><a href="#konfigurator">Materialien</a></li>
                     <li><a href="#produkte">Produkte</a></li>
                     <li><a href="#details">Details</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </div>
             
@@ -305,7 +447,6 @@
     </footer>
 
     <script>
-        // Funktion zum automatischen Einklappen des mobilen Menüs bei Klick auf einen Nav-Link
         function closeMobileMenu() {
             const toggle = document.getElementById('nav-toggle');
             if (toggle) toggle.checked = false;
@@ -325,10 +466,25 @@
             }
         }
 
+        document.querySelectorAll('.interactive-color').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const newImg = this.getAttribute('data-image');
+                
+                const activeContent = this.closest('.config-content');
+                if(activeContent) {
+                    const imgElement = activeContent.querySelector('.config-image-side img');
+                    if(imgElement) imgElement.src = newImg;
+                }
+                
+                const heroImg = document.getElementById('heroProductImage');
+                if(heroImg) heroImg.src = newImg;
+            });
+        });
+
         const productData = {
             'klett-schlauch': {
                 title: 'Flexibler Klettverschluss-Kabelschlauch (Premium Gewebe)',
-                description: 'Vergiss unordentlichen Kabelsalat hinter dem PC oder Fernseher. Unser flexibler Gewebe-Schlauch mit Klettverschluss passt sich perfekt an deine Kabelstränge an. Das strapazierfähige Material schützt deine Kabel vor Staub, Abnutzung und sogar Haustierbissen, während es gleichzeitig für eine cleane Optik sorgt. Das Beste: Kabel können an jeder beliebigen Stelle einfach seitlich herausgeführt werden!',
+                description: 'Vergiss unordentlichen Kabelsalat hinter dem PC oder Fernseher. Unser flexibler Gewebe-Schlauch mit Klettverschluss passt sich perfekt an deine Kabelstränge an. Das strapazierfähige material schützt deine Kabel vor Staub, Abnutzung und sogar Haustierbissen, während es gleichzeitig für eine cleane Optik sorgt. Das Beste: Kabel können an jeder beliebigen Stelle einfach seitlich herausgeführt werden!',
                 instructions: [
                     '<strong>Bündeln:</strong> Lege alle Kabel, die du verstecken möchtest, parallel nebeneinander.',
                     '<strong>Umschließen:</strong> Lege den geöffneten Kabelschlauch um das Kabelbündel.',
@@ -338,8 +494,8 @@
                 images: [
                     'bilder/Schlauch offen mit Kabeln.jpg',
                     'bilder/Schlauch offen mit Kabeln (2).jpg',
-                    'bilder/Schlauch am Schreibtisch 2.jpg',
-                    'bilder/Schlauch am Schreibtischtischbein.jpg'
+                    'bilder/punkt8_bilder1.jpeg',
+                    'bilder/punkt8_bilder1.jpeg'
                 ]
             },
             'klebe-kanal': {
@@ -355,8 +511,8 @@
                     'bilder/Klettverschluss ohne Hand Grau.jpg',
                     'bilder/Klettverschluss.jpg',
                     'bilder/Unter dem Tisch schwarz.jpg',
-                    'bilder/Unter dem Tisch schwarz mit Kabeln.jpg',
-                    'bilder/Schwarzes mit Kabeln 2.jpg'
+                    'bilder/punkt9_bild1.jpeg',
+                    'bilder/punkt9_bild2.jpeg'
                 ]
             }
         };
