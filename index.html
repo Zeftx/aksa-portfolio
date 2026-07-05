@@ -259,11 +259,7 @@
                 <div class="story-text">
                     <span class="material-badge" style="background: #fff0f0; color: #e03131; border: 1px solid #ffc9c9; font-weight: 600; padding: 4px 10px; border-radius: 20px; font-size: 13px;">🔥 Maximale Sicherheit</span>
                     <h3 style="margin-top: 10px;">Zertifizierter Brandschutz an Ihrem Arbeitsplatz</h3>
-<<<<<<< HEAD
                     <p>Wo viel Technik im Einsatz ist, hat Sicherheit oberste Priorität. Der ASKA Kabelkanal bietet Ihnen verlässlichen Schutz im Alltag: Unsere Materialien besitzen <strong>flammhemmende Eigenschaften</strong>. Dieser zertifizierte Schutz gilt uneingeschränkt sowohl für unsere robusten <strong>Polyester-Gewebekanäle</strong> als auch für die edle <strong>Kunstleder-Ausführung</strong>. So bewahren Sie im Ernstfall einen kühlen Kopf.</p>
-=======
-                    <p>Wo viel Technik im Einsatz ist, hat Sicherheit oberste Priorität. Die ASKA Kabelkanäle bieten Ihnen verlässlichen Schutz im Alltag: Unsere Materialien besitzen <strong>flammhemmende Eigenschaften</strong>. Dieser zertifizierte Schutz gilt uneingeschränkt sowohl für unsere robusten <strong>Polyester-Gewebekanäle</strong> als auch für die edle <strong>Kunstleder-Ausführung</strong>. So bewahren Sie im Ernstfall einen kühlen Kopf.</p>
->>>>>>> dfde18b (adjust)
                 </div>
                 <div class="story-images single-highlight-fix">
                     <img src="bilder/bild_flammenhemmend.jpeg" alt="ASKA Kabelkanal Flammhemmend für Polyester und Kunstleder" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
@@ -580,5 +576,91 @@
             }
         }
     </script>
+
+    <!-- 1. Das Cookie-Banner (HTML) -->
+<div id="cookie-banner" style="
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90%; 
+    max-width: 600px; 
+    background: #ffffff; 
+    color: #333333; 
+    padding: 20px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+    border-radius: 8px; 
+    z-index: 999999; 
+    font-family: sans-serif; 
+    display: none;
+">
+    <h3 style="margin-top: 0;">Cookie-Einstellungen</h3>
+    <p style="font-size: 14px; line-height: 1.5;">
+        Wir nutzen Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite notwendig sind (z. B. Warenkorb), sowie solche, die zu anonymen Statistikzwecken genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten.
+    </p>
+    
+    <!-- Links zu Impressum/Datenschutz (Dürfen laut Anwalt nicht verdeckt werden!) -->
+    <p style="font-size: 13px;">
+        <a href="/datenschutz" target="_blank" style="color: #0066cc;">Datenschutzerklärung</a> | 
+        <a href="/impressum" target="_blank" style="color: #0066cc;">Impressum</a>
+    </p>
+
+    <!-- Absolut gleichwertige Buttons (Wichtig laut BGH/LG-Urteilen!) -->
+    <div style="display: flex; gap: 10px; margin-top: 15px;">
+        <button id="btn-deny" style="flex: 1; padding: 10px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-weight: bold;">
+            Nur notwendige erlauben
+        </button>
+        <button id="btn-accept" style="flex: 1; padding: 10px; background: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+            Alle akzeptieren
+        </button>
+    </div>
+</div>
+
+<!-- 2. Die Logik (JavaScript) -->
+<script>
+(function() {
+    const banner = document.getElementById('cookie-banner');
+    const btnAccept = document.getElementById('btn-accept');
+    const btnDeny = document.getElementById('btn-deny');
+
+    // Prüfen, ob der Nutzer schon gewählt hat
+    if (!localStorage.getItem('cookie-consent')) {
+        banner.style.display = 'block';
+    } else if (localStorage.getItem('cookie-consent') === 'all') {
+        loadTrackingTools();
+    }
+
+    // Fall 1: Nutzer akzeptiert alles
+    btnAccept.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'all');
+        banner.style.display = 'none';
+        loadTrackingTools();
+    });
+
+    // Fall 2: Nutzer lehnt ab (nur notwendige)
+    btnDeny.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'essential');
+        banner.style.display = 'none';
+    });
+
+    // HIER kommen Ihre Tracking-Skripte rein (z.B. Google Analytics)
+    // Diese Funktion wird ERST ausgeführt, wenn der Nutzer eingewilligt hat!
+    function loadTrackingTools() {
+        console.log("Tracking-Tools werden jetzt geladen...");
+        
+        /* BEISPIEL: So binden Sie Google Analytics erst NACH Einwilligung ein:
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=IHR-TAG-ID";
+        script.async = true;
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'IHR-TAG-ID');
+        */
+    }
+})();
+</script>
 </body>
 </html>
