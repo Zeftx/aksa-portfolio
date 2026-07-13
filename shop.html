@@ -2,17 +2,31 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | ASKA PRODUCTS</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .content { padding: 20px; }
-        h1 { color: #ff6600; }
-        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; border-radius: 5px; }
+        body { 
+            font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            display: flex; justify-content: center; align-items: center; 
+            height: 100vh; margin: 0; text-align: center; background-color: #f9fbfc; 
+            padding: 20px;
+        }
+        .content { max-width: 500px; padding: 40px; background: #fff; border-radius: 24px; box-shadow: 0 10px 40px rgba(15,17,21,0.04); }
+        h1 { color: #0f1115; margin-bottom: 16px; }
+        p { color: #626975; line-height: 1.6; margin-bottom: 24px; }
+        .highlight { color: #ff6600; font-weight: 700; }
+        .btn-back { 
+            display: inline-block; padding: 14px 28px; background: #ff6600; 
+            color: #fff; text-decoration: none; border-radius: 16px; 
+            font-weight: 700; transition: all 0.3s ease;
+        }
+        .btn-back:hover { background: #e05a00; transform: translateY(-2px); }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>Shop coming soon...</h1>
+        <p>Wir arbeiten mit Hochdruck daran, unser Sortiment für dich verfügbar zu machen. Unsere Produkte sind bald auf verschiedenen Plattformen wie <span class="highlight">Amazon</span> und <span class="highlight">eBay</span> erhältlich.</p>
         <a href="index.html" class="btn-back">Zurück zur Startseite</a>
     </div>
 </body>

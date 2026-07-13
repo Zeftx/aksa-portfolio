@@ -598,11 +598,15 @@
         Wir nutzen Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite notwendig sind, sowie solche, die zu anonymen Statistikzwecken genutzt werden. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten.
     </p>
     
-    <!-- Links zu Impressum/Datenschutz (Dürfen laut Anwalt nicht verdeckt werden!) -->
-    <p style="font-size: 13px;">
-        <a href="/datenschutz" target="_blank" style="color: #0066cc;">Datenschutzerklärung</a> | 
-        <a href="/impressum" target="_blank" style="color: #0066cc;">Impressum</a>
-    </p>
+<!-- RICHTIG: -->
+<p style="font-size: 13px;">
+    <!-- Falls du eine separate Seite für Datenschutz hast, lass es so. 
+         Falls nicht, ändere es hier auch auf #datenschutz -->
+    <a href="datenschutz.html" target="_blank" style="color: #0066cc;">Datenschutzerklärung</a> | 
+    
+    <!-- Hier wird jetzt auf die ID "impressum" in deiner Fußzeile verwiesen -->
+    <a href="#impressum" style="color: #0066cc;">Impressum</a>
+</p>
 
     <!-- Absolut gleichwertige Buttons (Wichtig laut BGH/LG-Urteilen!) -->
     <div style="display: flex; gap: 10px; margin-top: 15px;">
