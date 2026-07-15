@@ -3,49 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stil & Ästhetik</title>
+    <title>High-End Ästhetik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body, html {
             height: 100%;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: white;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
             overflow: hidden;
         }
 
-        /* Das Bild als Hintergrund */
+        /* Hero Sektion mit sanftem Zoom-Effekt beim Laden */
         .hero {
             height: 100vh;
-            background: url('kanye.png') no-repeat center center fixed;
+            width: 100vw;
+            background: url('kanye.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             padding-left: 10%;
+            animation: zoomIn 15s infinite alternate ease-in-out;
         }
 
-        /* Glassmorphism Effekt für die Box */
+        /* Glassmorphism mit subtiler Schatten-Animation */
         .content {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 40px;
-            border-left: 4px solid #fff;
-            max-width: 400px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 50px;
+            border-left: 6px solid #ffffff;
+            max-width: 450px;
+            animation: slideIn 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         h1 {
-            font-size: 3rem;
-            letter-spacing: -2px;
+            font-size: 3.5rem;
+            letter-spacing: -3px;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1;
         }
 
         p {
+            font-size: 1.1rem;
             font-weight: 300;
-            line-height: 1.6;
-            opacity: 0.9;
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* Animationen */
+        @keyframes zoomIn {
+            from { background-size: 100% 100%; }
+            to { background-size: 110% 110%; }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
     </style>
 </head>
@@ -54,7 +71,7 @@
 <div class="hero">
     <div class="content">
         <h1>Zeitloser Stil</h1>
-        <p>Ein Blick auf die Ästhetik der modernen Mode. Reduziert, kraftvoll und präzise.</p>
+        <p>Reduziert auf das Wesentliche. Die Verschmelzung von kraftvoller Präsenz und moderner Ästhetik.</p>
     </div>
 </div>
 
